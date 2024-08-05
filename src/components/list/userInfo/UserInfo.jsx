@@ -1,19 +1,23 @@
 import "./userInfo.css"
+import { useUserStore } from "../../../lib/userStore";
 
-const UserInfo = () => {
+const Userinfo = () => {
+
+  const { currentUser } = useUserStore();
+
   return (
-    <div className="userInfo">
+    <div className='userInfo'>
       <div className="user">
-        <img src="./avatar.png" alt="" />
-        <h2>John Saffa</h2>
+        <img src={currentUser.avatar || "./avatar.png"} alt="" />
+        <h2>{currentUser.username}</h2>
       </div>
       <div className="icons">
-      <img src="./more.png" alt="More Options" />
-        <img src="./video.png" alt="Video Call" />
-        <img src="./edit.png" alt="Edit" />
+        <img src="./more.png" alt="" />
+        <img src="./video.png" alt="" />
+        <img src="./edit.png" alt="" />
       </div>
     </div>
   )
 }
 
-export default UserInfo
+export default Userinfo
