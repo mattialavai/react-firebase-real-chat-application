@@ -1,7 +1,7 @@
 import "./userInfo.css"
 import { useUserStore } from "../../../lib/userStore";
 
-const Userinfo = () => {
+const UserInfo = () => {
 
   const { currentUser } = useUserStore();
 
@@ -20,4 +20,4 @@ const Userinfo = () => {
   )
 }
 
-export default Userinfo
+export default UserInfo
